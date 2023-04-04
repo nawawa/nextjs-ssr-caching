@@ -21,7 +21,13 @@ export const getServerSideProps: GetServerSideProps = async ({res}) => {
 };
 
 const Page: NextPage<Props> = ({ currentTime }) => {
-  return <p>{currentTime}</p>;
+  return (
+    <div>
+      <h2>SSR</h2>
+      <p>s-maxage=10, stale-while-revalidate=86400</p>
+      <p>{currentTime}</p>
+    </div>
+  );
 };
 
 export default Page
