@@ -5,7 +5,7 @@ services:
       context: .
     tty: true
     init: true
-    # working_dir: /app/nextjs-ssr-caching
+    working_dir: /app/nextjs-ssr-caching
     volumes:
       - ./src:/app/nextjs-ssr-caching
     ports:
