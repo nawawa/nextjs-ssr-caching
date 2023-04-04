@@ -1,0 +1,12 @@
+version: "3"
+services:
+  app:
+    build:
+      context: .
+    tty: true
+    init: true
+    # working_dir: /app/nextjs-ssr-caching
+    volumes:
+      - ./src:/app/nextjs-ssr-caching
+    ports:
+      - "3999:3999"
